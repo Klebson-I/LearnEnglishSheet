@@ -1,0 +1,17 @@
+ <h1 class="playHeader">Play game to remember your words and idioms</h1>
+ <p class="playParagraph">select correct answer</p>
+
+ <form action="/play/check" method="POST" class="playSheetContainer">
+    {{#each game}}
+        <fieldset class="questionField">
+            <legend>{{this.questionNo}}. {{this.meaning}}</legend>
+            {{#each this.answers}}
+                <label for="" style="font-family: 'Open Sans', sans-serif; font-size: 20px"><input type="radio" name="ans{{../this.questionNo}}" value="{{this}}">{{this}}</label>
+            {{/each}}
+        </fieldset>
+    {{/each}}
+
+     <button type="submit" class="sendTestButton">Send answers</button>
+ </form>
+
+ <a href="/home" class="backLink">Back to main page</a>

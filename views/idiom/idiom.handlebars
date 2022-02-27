@@ -1,0 +1,53 @@
+<table>
+    <thead>
+    <tr>
+        <th>Idiom</th>
+        <th>Sentences</th>
+        <th>Meaning</th>
+        <th style="color: red">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each idioms}}
+        <tr>
+            <th>{{this.idiom}}</th>
+            <th>
+                {{#if (checkArrLength this.sentences)}}
+                    ---
+                {{else}}
+                    {{#each this.sentences}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                {{/if}}
+            </th>
+            <th>
+                {{#if (isnull this.meaning)}}
+                    ---
+                {{else}}
+                    {{this.meaning}}
+                {{/if}}
+            </th>
+            <th>
+                <form action="/idiom/{{this.id}}">
+                    <button type="submit">
+                        <img src="/images/edit.png" alt="" width="32px" height="auto">
+                    </button>
+                </form>
+                <form action="/idiom/{{this.id}}?_method=DELETE" method="post">
+                    <button type="submit">
+                        <img src="/images/delete.png" alt="" width="32px" height="auto">
+                    </button>
+                </form>
+            </th>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<form action="/idiom/add" method="get">
+    <button type="submit" class="addButton">
+        <img src="/images/plus.png" alt="">
+    </button>
+</form>
+
+<a href="/home" class="backLink">Back to main page</a>

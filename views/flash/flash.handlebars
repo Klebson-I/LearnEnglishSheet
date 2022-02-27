@@ -1,0 +1,15 @@
+<h1>Learn more with flash-cards...</h1>
+    <div class="flashSlider">
+        <div class="flashSeries">
+            {{#each flash}}
+                <div class="flash">
+                    <h1 class="flashLearn">{{this.learn}}</h1>
+                    <h2 class="flashMeaning hidden">{{this.meaning}}</h2>
+                </div>
+            {{/each}}
+        </div>
+        <button class="prev arrow"> < </button>
+        <button class="next arrow"> > </button>
+    </div>
+<a href="/home" class="backLink">Back to main page</a>
+<script src="/js/script.js"></script>

@@ -1,0 +1,43 @@
+<h1 class="wordHeader">Add new word</h1>
+
+<form action="/word" method="post" class="wordForm">
+    <div class="inputs">
+        <div class="inputs__partOne">
+            <label for="word" class="wordLabel">Word</label>
+            <input type="text" name="word" id="word">
+
+            <label for="noun" class="wordLabel">Noun</label>
+            <input type="text" name="noun" id="noun">
+
+            <label for="verb" class="wordLabel">Verb</label>
+            <input type="text" name="verb" id="verb">
+
+            <label for="adjective" class="wordLabel">Adjective</label>
+            <input type="text" name="adjective" id="adjective">
+
+            <label for="meaning" class="wordLabel">Meaning</label>
+            <input type="text" name="meaning" id="meaning">
+        </div>
+
+        <div class="inputs__partTwo">
+            <label for="sentence" class="wordLabel" style="margin-bottom:15px">Write sentence with your word</label>
+            <div class="sentenceInput__div">
+                <input type="text" id="sentence" name=""  class="sentenceInput" style="display: none">
+                <button class="sentenceButton addSentenceButton" role="button"><img src="/images/plus.png" alt="" width="25px" height="auto"></button>
+                <button class="sentenceButton removeSentenceButton"><img src="/images/minus.png" alt="" width="25px" height="auto"></button>
+            </div>
+            <label for="sentences">Your sentences : </label>
+            <div class="singleArea">
+
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="addWordButton">Add new</button>
+</form>
+
+
+
+
+
+
+

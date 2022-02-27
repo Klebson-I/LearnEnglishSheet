@@ -1,0 +1,387 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #c5c5f6;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border:solid 2px black;
+}
+.mainHeader__header{
+
+    font-family: 'Fuzzy Bubbles', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.mainHeader img{
+    width: 64px;
+    height: auto;
+}
+.mainHeader img:first-child{
+    transform: translateY(-50%);
+    margin-right: 20px;
+}
+.mainHeader img:last-child{
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+.homeContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.homeContainer__form{
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #efefef;
+}
+.homeContainer__form button{
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+.homeContainer__form h2{
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin: 20px;
+}
+/* Up this com are elements that are not responsive, make it in a future ! */
+
+.errorDiv{
+    margin-top: 20px;
+    background-color: #e56464;
+    border: red 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.errorDiv h1{
+    font-size: 40px;
+}
+.errorDiv h2{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.errorDiv a{
+    color:black;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+table{
+    width: 90%;
+    border: solid 2px black;
+    margin-top: 20px;
+}
+table th,tr{
+    border: solid 1px black;
+    padding: 10px;
+}
+table p{
+    margin: 5px;
+}
+.backLink{
+    color: black;
+    font-style: italic;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.addButton{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.addButton img{
+    height:40px ;
+    width:auto;
+}
+.wordLabel{
+    font-size: 25px;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+.wordHeader{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+}
+.inputs{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+@media (max-width: 1000px) {
+    .inputs{
+        flex-direction: column;
+    }
+}
+.inputs__partOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+}
+.inputs__partOne input{
+    font-size: 20px;
+    width: 50%;
+}
+.inputs__partTwo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inputs__partTwo input{
+    font-size: 20px;
+    width: 50%;
+}
+.wordForm{
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sentenceInput__div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.addWordButton{
+    font-size: 30px;
+    padding: 10px;
+    background-color: inherit;
+    border: solid 1px black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.addWordButton:hover{
+    background-color: #c4c4ef;
+}
+.singleSentences{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.addedDiv{
+    margin-top: 20px;
+    background-color: #d8de7b;
+    border: #b5d709 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.addedDiv h1{
+    font-size: 40px;
+}
+.addedDiv h2{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.addedDiv a{
+    color:black;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.wordColor{
+    color: #231d1d;
+}
+.singleSentenceInput{
+    width: 100%;
+}
+.singleArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.playButton{
+    border-radius: 50%;
+    padding: 15px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.playHeader{
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 0px;
+}
+.playParagraph{
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+}
+.playSheetContainer{
+    width: 70%;
+    background-color: rgba(222, 239, 241, 0.97);
+    border: solid 2px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 15px 0px;
+}
+.questionField{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 15px 0px;
+}
+.questionField legend{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+.sendTestButton{
+    background-color: inherit;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+.correct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #aefa84;
+    border: 1px solid #66a500;
+    margin: 10px 0;
+    padding: 10px;
+}
+.mistake{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #eeadb4;
+    border: 1px solid indianred;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.results{
+    font-family: 'Open Sans', sans-serif;
+
+}
+.activityChoiceDiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin: 50px 0px;
+}
+
+.flashSlider{
+    margin: 20px 0px;
+    overflow: hidden;
+    display: flex;
+    width: 400px;
+    height:280px ;
+    position: relative;
+}
+.flashSeries{
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    transition: ease-in-out 0.2s;
+}
+.flash{
+    width: 400px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+}
+.hidden{
+    display: none;
+}
+.next{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    background-color: inherit;
+}
+.prev{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    background-color: inherit;
+}
+
+.flashSlider:hover > .prev{
+    opacity: 1;
+}
+.flashSlider:hover > .next{
+    opacity: 1;
+}
+
+.flashMeaning{
+    padding: 20px;
+}

@@ -1,0 +1,76 @@
+<table>
+    <thead>
+        <tr>
+            <th>Word</th>
+            <th>Noun</th>
+            <th>Verb</th>
+            <th>Adjective</th>
+            <th>Sentences</th>
+            <th>Meaning</th>
+            <th style="color: #f61d1d">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each words}}
+            <tr>
+                <th>{{this.word}}</th>
+                <th>
+                    {{#if (isnull this.noun)}}
+                            ---
+                        {{else}}
+                        {{this.noun}}
+                    {{/if}}
+                </th>
+                <th>
+                    {{#if (isnull this.verb)}}
+                        ---
+                    {{else}}
+                        {{this.verb}}
+                    {{/if}}
+                </th>
+                <th>
+                    {{#if (isnull this.adjective)}}
+                        ---
+                    {{else}}
+                        {{this.adjective}}
+                    {{/if}}
+                </th>
+                <th>
+                    {{#if (checkArrLength this.sentences)}}
+                        ---
+                    {{else}}
+                        {{#each this.sentences}}
+                            <p>{{this}}</p>
+                        {{/each}}
+                    {{/if}}
+                </th>
+                <th>
+                    {{#if (isnull this.meaning)}}
+                        ---
+                    {{else}}
+                        {{this.meaning}}
+                    {{/if}}
+                </th>
+                <th class="actions">
+                    <form action="/word/{{this.id}}">
+                        <button type="submit">
+                            <img src="/images/edit.png" alt="" width="32px" height="auto">
+                        </button>
+                    </form>
+                    <form action="/word/{{this.id}}?_method=DELETE" method="post">
+                        <button type="submit">
+                            <img src="/images/delete.png" alt="" width="32px" height="auto">
+                        </button>
+                    </form>
+                </th>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form action="/word/add" method="get">
+    <button type="submit" class="addButton">
+        <img src="/images/plus.png" alt="">
+    </button>
+</form>
+<a href="/home" class="backLink">Back to main page</a>

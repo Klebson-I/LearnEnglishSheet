@@ -1,0 +1,34 @@
+<h1 class="wordHeader">Add new idiom</h1>
+
+<form action="/idiom" method="post" class="wordForm">
+    <div class="inputs">
+        <div class="inputs__partOne">
+            <label for="idiom" class="wordLabel">Idiom</label>
+            <input type="text" name="idiom" id="idiom">
+
+            <label for="meaning" class="wordLabel">Meaning</label>
+            <input type="text" name="meaning" id="meaning">
+        </div>
+
+        <div class="inputs__partTwo">
+            <label for="sentence" class="wordLabel" style="margin-bottom:15px">Write sentence with your idiom</label>
+            <div class="sentenceInput__div">
+                <input type="text" id="sentence" name=""  class="sentenceInput" style="display: none">
+                <button class="sentenceButton addSentenceButton" role="button"><img src="/images/plus.png" alt="" width="25px" height="auto"></button>
+                <button class="sentenceButton removeSentenceButton"><img src="/images/minus.png" alt="" width="25px" height="auto"></button>
+            </div>
+            <label for="sentences">Your sentences : </label>
+            <div class="singleArea">
+
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="addWordButton">Add new</button>
+</form>
+
+
+
+
+
+
+

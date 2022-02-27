@@ -1,0 +1,18 @@
+<h1 class="wordHeader">Results of your test</h1>
+<h2 style="color: #f16969">Your score is {{correctCount}}/{{totalCount}}</h2>
+
+<div class="results">
+    {{#each checkedAnswers}}
+        <div class="{{#if correct}}correct{{else}}mistake{{/if}}">
+            <h2>{{questionNo}}. {{meaning}}</h2>
+            {{#if correct}}
+                <h3>Your answer is correct ( {{correctAnswer}} )</h3>
+            {{else}}
+                <h3>Your answer is not correct</h3>
+                <h3>The correct answer is {{correctAnswer}}</h3>
+            {{/if}}
+        </div>
+    {{/each}}
+</div>
+
+<a href="/home" class="backLink">Back to main</a>
