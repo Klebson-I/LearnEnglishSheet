@@ -1,7 +1,7 @@
 # LearnEnglishSheet
 
 Restful interface to manage english words database. 
-App also has possibility to render test from words to check knowledge, and create flashcards.
+App also has possibility to render test from words to check knowledge, and creates flashcards.
 
 It require to have : 
 - mysql database running on your localhost (database file is uploaded with project) (hostname : localhost, user: root, no password)
