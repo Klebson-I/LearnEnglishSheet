@@ -6,7 +6,7 @@ import {IdiomObj, recordType} from "../types/type";
 export const idiomRouter=Router();
 
 idiomRouter
-    .get('/',async (req,res)=>{
+    .get('/',async (req:Request,res:Response)=>{
     const idioms=await IdiomRecord.getAll();
     const idiomsWithSentences=await returnWithSentences(idioms);
     const finalIdioms=checkDotsInSentences(idiomsWithSentences);
@@ -61,3 +61,4 @@ idiomRouter
             idiom:obj.idiom
         });
     })
+

@@ -19,11 +19,11 @@ export class WordRecord implements WordObject{
     constructor(obj:WordObject) {
         this.id=obj.id??uuid();
         this.word=obj.word;
-        this.noun=obj.noun;
-        this.verb=obj.verb;
-        this.adjective=obj.adjective;
-        this.meaning=obj.meaning;
-        this.sentences=null;
+        this.noun=obj.noun??null;
+        this.verb=obj.verb??null;
+        this.adjective=obj.adjective??null;
+        this.meaning=obj.meaning??null;
+        this.sentences=null??null;
     }
     async insert():Promise<string>{
         try{
@@ -82,7 +82,7 @@ export class WordRecord implements WordObject{
     static async getOne(id:string):Promise<WordRecord|null>{
         try{
             const [results]=await pool.execute('select * from `word` where `id`=:id',{id}) as WordResult;
-            return new WordRecord(results[0]);
+            return results.length>0? new WordRecord(results[0]):null;
         }
         catch(e){
             console.log(e);

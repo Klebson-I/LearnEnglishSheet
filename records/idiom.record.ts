@@ -1,8 +1,8 @@
 import {pool} from "../utils/connection";
 import {v4 as uuid} from 'uuid';
-import {SentenceRecord, SentenceResult} from "./sentence.record";
+import { SentenceResult} from "./sentence.record";
 import {FieldPacket} from "mysql2";
-import {IdiomObj, WordObject} from "../types/type";
+import {IdiomObj} from "../types/type";
 
 
 
