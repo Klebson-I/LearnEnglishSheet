@@ -9,6 +9,8 @@ import {errorHandle} from "./utils/error";
 import {helpers} from "./utils/utils";
 import {playRouter} from "./routes/playRouter";
 import {flashRouter} from "./routes/flashRouter";
+import {WordRecord} from "./records/word.record";
+
 
 
 const app=express();
@@ -31,3 +33,6 @@ app.use('/flash',flashRouter);
 
 app.use(errorHandle);
 app.listen(3000);
+
+
+

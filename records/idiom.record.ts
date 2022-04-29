@@ -51,7 +51,7 @@ export class IdiomRecord implements IdiomObj{
             //check sentences
             await pool.execute('Update `idiom` set `idiom`.`idiom`=:idiom, `idiom`.`meaning`=:meaning where `idiom`.`id`=:id',{
                 idiom:obj.idiom,
-                meaning:obj.meaning,
+                meaning:obj.meaning??null,
                 id:this.id
             });
         }
@@ -72,10 +72,10 @@ export class IdiomRecord implements IdiomObj{
         }
     }
 
-    static async getOne(id:string):Promise<IdiomRecord>{
+    static async getOne(id:string):Promise<IdiomRecord|null>{
         try{
             const [results]=await pool.execute('select * from `idiom` where `id`=:id',{id}) as IdiomResults;
-            return new IdiomRecord(results[0]);
+            return results.length>0?new IdiomRecord(results[0]):null;
         }
         catch(e){
             console.log(e);

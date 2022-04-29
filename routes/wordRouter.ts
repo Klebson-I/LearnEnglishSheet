@@ -55,9 +55,9 @@ wordRouter
     })
     .put('/:id',async (req:Request,res:Response)=>{
         const obj:WordObject=req.body;
+        console.log(obj);
         const word=await WordRecord.getOne(req.params.id);
         await word.update(obj);
-        //przerobić na 1 funkcje a tu tylko stworzyć wszystkie zdania
         await updateSentences(obj,word.id,recordType.word);
 
         res.render('word/updated',{
