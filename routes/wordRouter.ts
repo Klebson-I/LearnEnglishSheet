@@ -55,7 +55,6 @@ wordRouter
     })
     .put('/:id',async (req:Request,res:Response)=>{
         const obj:WordObject=req.body;
-        console.log(obj);
         const word=await WordRecord.getOne(req.params.id);
         await word.update(obj);
         await updateSentences(obj,word.id,recordType.word);
